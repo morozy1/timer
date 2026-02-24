@@ -20,6 +20,7 @@ body {
     color: white;
 }
 
+/* Карточка */
 .card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
@@ -78,7 +79,9 @@ button {
     color: white;
 }
 
-.start-btn:hover { transform: scale(1.05); }
+.start-btn:hover {
+    transform: scale(1.05);
+}
 
 .reset-btn {
     margin-top: 30px;
@@ -87,7 +90,9 @@ button {
     display: none;
 }
 
-.reset-btn:hover { background: rgba(255,255,255,0.2); }
+.reset-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
 
 #countdown {
     display: none;
@@ -132,7 +137,7 @@ function startTimer() {
         return;
     }
 
-    // Если время не указано — автоматически 00:00:00
+    // если время не указано — автоматически 00:00:00
     if (!time) {
         time = "00:00:00";
     }
@@ -151,7 +156,7 @@ function startTimer() {
     updateCountdown();
     interval = setInterval(updateCountdown, 1000);
 }
-    
+
 function updateCountdown() {
     const now = new Date();
     const diff = targetDate - now;
@@ -184,4 +189,3 @@ function resetTimer() {
 
 </body>
 </html>
-
