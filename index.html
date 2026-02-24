@@ -132,7 +132,7 @@ function startTimer() {
         return;
     }
 
-    // Если время не указано → 00:00:00
+    // Если время не указано — автоматически 00:00:00
     if (!time) {
         time = "00:00:00";
     }
@@ -151,7 +151,7 @@ function startTimer() {
     updateCountdown();
     interval = setInterval(updateCountdown, 1000);
 }
-
+    
 function updateCountdown() {
     const now = new Date();
     const diff = targetDate - now;
@@ -184,3 +184,4 @@ function resetTimer() {
 
 </body>
 </html>
+
